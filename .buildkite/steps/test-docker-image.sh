@@ -7,7 +7,7 @@ image_tag="${2:-}"
 platform="${3:-}"
 
 platform_any_to_uname() {
-  case $1 in
+  case "${1#linux/}" in
     amd64 | x86_64)
       printf "x86_64"
       ;;
